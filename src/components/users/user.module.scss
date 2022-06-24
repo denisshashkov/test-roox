@@ -1,0 +1,45 @@
+.user {
+  height: 73px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  margin-bottom: 14px;
+  padding: 9px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__list {
+    margin-bottom: 10px;
+    height: 87vh;
+    overflow-y: auto;
+    padding: 5px;
+  }
+  &__block {
+    margin-bottom: 7px;
+    &__data {
+      color: #a3a3a3;
+      margin-right: 7px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &__detail {
+      color: #4b51ef;
+      font-weight: 400;
+      float: right;
+      &:hover {
+        cursor: pointer;
+        color: #9d76db;
+        transition: 0.3s;
+      }
+    }
+  }
+  &__count {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

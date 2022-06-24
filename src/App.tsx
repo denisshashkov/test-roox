@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import Aside from "./components/aside/Aside";
+import Preloader from "./components/commons/preloader/Preloader";
 
+const UsersPage = lazy(() => import("./components/users/UsersPage"));
+const ProfilePage = lazy(() => import("./components/profile/ProfilePage"));
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Aside />
+      <div className="app__content">
+        <Suspense fallback={<Preloader />}>
+          <Routes>
+            <Route path="/" element={<UsersPage />} />
+            <Route path="/profile/:id" element={<ProfilePage />} />
+          </Routes>
+        </Suspense>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,18 @@
+.aside {
+  width: 25%;
+  position: relative;
+  background-color: #bdbdbd;
+  &__buttons__block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 45px;
+    left: 20px;
+    height: 85px;
+  }
+  h3 {
+    font-size: 12px;
+    margin: 0;
+  }
+}
