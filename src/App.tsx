@@ -12,7 +12,7 @@ function App() {
       <div className="app__content">
         <Suspense fallback={<Preloader />}>
           <Routes>
-            <Route path="/" element={<UsersPage />} />
+            <Route path="/*" element={<UsersPage />} />
             <Route path="/profile/:id" element={<ProfilePage />} />
           </Routes>
         </Suspense>
