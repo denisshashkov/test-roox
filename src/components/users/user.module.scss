@@ -43,3 +43,12 @@
     justify-content: flex-end;
   }
 }
+
+@media screen and (max-width: 580px) {
+  .user {
+    height: 73px;
+    &__list {
+      height: 76vh;
+    }
+  }
+}

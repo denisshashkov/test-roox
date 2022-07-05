@@ -4,6 +4,8 @@ import { UserContext } from "../../context/Context";
 import style from "./profile.module.scss";
 import { ProfileForm } from "./../forms/ProfileForm";
 import { useParams } from "react-router-dom";
+import { FormData } from "../../types/types";
+import { useNavigate } from "react-router-dom";
 
 const ProfilePage: React.FC = () => {
   const [readOnly, setReadOnly] = useState<boolean>(true);
@@ -11,6 +13,7 @@ const ProfilePage: React.FC = () => {
   const params = useParams();
   const paramsId = Number(params.id);
   const data = useContext(UserContext);
+  let navigate = useNavigate();
 
   useEffect(() => {
     data?.getProfile(paramsId);
@@ -21,6 +24,11 @@ const ProfilePage: React.FC = () => {
   const editHandler = () => {
     setReadOnly(false);
     setDisabled(true);
+  };
+
+  const handleSubmit = (data: FormData) => {
+    console.log(JSON.stringify(data));
+    navigate("/", { replace: true });
   };
   return (
     <div className={style.profile}>
@@ -34,6 +42,7 @@ const ProfilePage: React.FC = () => {
         profile={data?.profile}
         profileAddress={data?.profile.address}
         readOnly={readOnly}
+        onSubmit={handleSubmit}
       />
     </div>
   );

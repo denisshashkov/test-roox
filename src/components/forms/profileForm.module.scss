@@ -51,6 +51,10 @@ textarea {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
   }
+  &:disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
 }
 
 .error__text {
