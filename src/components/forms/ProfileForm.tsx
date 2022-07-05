@@ -1,27 +1,16 @@
 import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { AddressType, UserType } from "../../types/types";
+import { FormData } from "../../types/types";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import style from "./profileForm.module.scss";
-
-type FormData = {
-  name: string;
-  userName: string;
-  email: string;
-  street: string;
-  city: string;
-  zipcode: string;
-  phone: string;
-  website: string;
-  comment: string;
-  exampleRequired: string;
-};
 
 type PropsType = {
   profile: UserType | undefined;
   profileAddress: AddressType | undefined;
   readOnly: boolean;
+  onSubmit: (data: FormData) => void;
 };
 
 const schema = yup
@@ -34,8 +23,14 @@ const schema = yup
     email: yup.string().email("email should have correct format").required(),
     street: yup.string().required(),
     city: yup.string().required(),
-    zipcode: yup.string().max(10).required(),
-    phone: yup.string().max(10).required(),
+    zipcode: yup
+      .string()
+      .matches(/^([^A-Z,a-z]*)$/, "Zip-Code must contain numbers ")
+      .required(),
+    phone: yup
+      .string()
+      .matches(/^([^A-Z,a-z]*)$/, "the phone must contain numbers ")
+      .required(),
   })
   .required();
 
@@ -43,19 +38,21 @@ export const ProfileForm: React.FC<PropsType> = ({
   profile,
   profileAddress,
   readOnly,
+  onSubmit,
 }) => {
   const {
     register,
     handleSubmit,
-    watch,
     reset,
     formState: { errors, isValid },
   } = useForm<FormData>({ mode: "onBlur", resolver: yupResolver(schema) });
-  const onSubmit: SubmitHandler<FormData> = (data) =>
-    console.log(JSON.stringify(data));
+  const submitHandler = (data: FormData) => {
+    onSubmit(data);
+    reset();
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(submitHandler)}>
       <div className={style.input__wrapper}>
         <label>Name</label>
         <input

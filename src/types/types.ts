@@ -39,3 +39,16 @@ export type UserContextType = {
   profile: UserType;
   usersCount: number;
 };
+
+export type FormData = {
+  name: string;
+  userName: string;
+  email: string;
+  street: string;
+  city: string;
+  zipcode: string;
+  phone: string;
+  website: string;
+  comment: string;
+  exampleRequired: string;
+};
