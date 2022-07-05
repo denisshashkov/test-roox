@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/denisshashkov/test-roox/static/css/main.0d76dbba.css",
-    "main.js": "/denisshashkov/test-roox/static/js/main.b1fd6ff2.js",
-    "static/css/79.d858af5d.chunk.css": "/denisshashkov/test-roox/static/css/79.d858af5d.chunk.css",
-    "static/js/79.bc7af5c9.chunk.js": "/denisshashkov/test-roox/static/js/79.bc7af5c9.chunk.js",
-    "static/css/71.24acf4b6.chunk.css": "/denisshashkov/test-roox/static/css/71.24acf4b6.chunk.css",
-    "static/js/71.ca4f39f7.chunk.js": "/denisshashkov/test-roox/static/js/71.ca4f39f7.chunk.js",
-    "static/js/646.2b5157d3.chunk.js": "/denisshashkov/test-roox/static/js/646.2b5157d3.chunk.js",
-    "index.html": "/denisshashkov/test-roox/index.html",
-    "main.0d76dbba.css.map": "/denisshashkov/test-roox/static/css/main.0d76dbba.css.map",
-    "main.b1fd6ff2.js.map": "/denisshashkov/test-roox/static/js/main.b1fd6ff2.js.map",
-    "79.d858af5d.chunk.css.map": "/denisshashkov/test-roox/static/css/79.d858af5d.chunk.css.map",
-    "79.bc7af5c9.chunk.js.map": "/denisshashkov/test-roox/static/js/79.bc7af5c9.chunk.js.map",
-    "71.24acf4b6.chunk.css.map": "/denisshashkov/test-roox/static/css/71.24acf4b6.chunk.css.map",
-    "71.ca4f39f7.chunk.js.map": "/denisshashkov/test-roox/static/js/71.ca4f39f7.chunk.js.map",
-    "646.2b5157d3.chunk.js.map": "/denisshashkov/test-roox/static/js/646.2b5157d3.chunk.js.map"
+    "main.css": "/test-roox/static/css/main.0d76dbba.css",
+    "main.js": "/test-roox/static/js/main.80179f96.js",
+    "static/css/79.d858af5d.chunk.css": "/test-roox/static/css/79.d858af5d.chunk.css",
+    "static/js/79.bc7af5c9.chunk.js": "/test-roox/static/js/79.bc7af5c9.chunk.js",
+    "static/css/71.24acf4b6.chunk.css": "/test-roox/static/css/71.24acf4b6.chunk.css",
+    "static/js/71.ca4f39f7.chunk.js": "/test-roox/static/js/71.ca4f39f7.chunk.js",
+    "static/js/646.2b5157d3.chunk.js": "/test-roox/static/js/646.2b5157d3.chunk.js",
+    "index.html": "/test-roox/index.html",
+    "main.0d76dbba.css.map": "/test-roox/static/css/main.0d76dbba.css.map",
+    "main.80179f96.js.map": "/test-roox/static/js/main.80179f96.js.map",
+    "79.d858af5d.chunk.css.map": "/test-roox/static/css/79.d858af5d.chunk.css.map",
+    "79.bc7af5c9.chunk.js.map": "/test-roox/static/js/79.bc7af5c9.chunk.js.map",
+    "71.24acf4b6.chunk.css.map": "/test-roox/static/css/71.24acf4b6.chunk.css.map",
+    "71.ca4f39f7.chunk.js.map": "/test-roox/static/js/71.ca4f39f7.chunk.js.map",
+    "646.2b5157d3.chunk.js.map": "/test-roox/static/js/646.2b5157d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d76dbba.css",
-    "static/js/main.b1fd6ff2.js"
+    "static/js/main.80179f96.js"
   ]
 }
